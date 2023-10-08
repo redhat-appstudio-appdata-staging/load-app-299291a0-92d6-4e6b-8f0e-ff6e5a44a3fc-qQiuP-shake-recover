@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-go-basic-amqy
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-go-basic-amqy
+    app.kubernetes.io/part-of: load-app-299291a0-92d6-4e6b-8f0e-ff6e5a44a3fc
+  name: devfile-sample-go-basic-amqy
+spec:
+  ports:
+  - name: "8081"
+    port: 8081
+    targetPort: 8081
+  selector:
+    app.kubernetes.io/instance: devfile-sample-go-basic-amqy
+status:
+  loadBalancer: {}
